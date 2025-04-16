@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Obstacle Detection and Avoidance Using Basic Perception- Alpha by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html"></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down projects-link">projects</a>
+								<ul>
+									<li><a href="Fixed-Wing Drone.html">Fixed-Wing Drone	</a></li>
+									<li><a href="Data Analysis for Postoperative Hypoxemia.html">Predicting Postoperative Hypoxemia: A Machine Learning Approach</a></li>
+									<li><a href="Obstacle Detection and Avoidance Using Basic Perception.html">Obstacle Detection and Avoidance Using Basic Perception									</a></li>
+									<li><a href="OPC and QCM Sensor Integration.html">Aerosol Measurements by OPC Aided by QCM Mass Sensor</a></li>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>Obstacle Detection and Avoidance Using Basic Perception</h2>
+					</header>
+					<div class="box">
+						<h3 style="font-weight: bold;">Project Overview</h3>
+						<p> In this project, I implemented a Monte Carlo Localization (MCL) algorithm using a particle filter to localize a robot in a simulated indoor environment (ECEB building) using LiDAR sensor data. The simulation was built on ROS Noetic and Gazebo, and the system required interpreting LiDAR measurements, modeling robot dynamics, and tuning various parameters to evaluate localization performance under different configurations.</p>
+						<img src="images/gemmodule.png" alt="" style="width: 800px; height: auto; margin-top: 0; margin-bottom: 10px;" />
+
+						<div class="row">
+							<div class="row-6 row-12-mobilep">
+								<h3 style="margin-bottom: 5px; font-weight: bold;">Key Contribution</h3>
+								<h4 style="margin-top: 0; margin-bottom: 5px">Sensor Model & Directional Expansion:</h4>
+								<p style="margin-top: 0; margin-bottom: 5px;">
+									 Extended the default LiDAR model from 4 to 8 measurement directions and adjusted both the vehicle and particle sensor models accordingly to improve spatial awareness.
+								<h4 style="margin-top: 0; margin-bottom: 5px">MCL Implementation & Parameter Tuning:</h4>
+									 Modified and tuned the runFilter() function in particle_filter.py to support motion updates, Gaussian weight calculation, and multinomial resampling of particles. Evaluated the impact of varying particle count (500–1500), sensor limit (15–25), and measurement direction count.
+								<h4 style="margin-top: 0; margin-bottom: 5px">								Simulation Design & Data Collection:
+								</h4>
+								Set up diverse scenarios: modified sensor range, noise injection, and ambiguous initial positions.
+								Developed Python tools to extract key metrics: average position error, orientation error, iterations per second, and total iterations.
+								Recorded simulation videos and visualized convergence behavior across setups.<p>
+								<img src="images/gemsim.png" alt="" style="width: 600px; height: auto; margin-top: 0; margin-bottom: 10px;" />
+								<img src="images/gemsim1.png" alt="" style="width: 600px; height: auto; margin-top: 0; margin-bottom: 10px;" />
+
+
+										<h3 style="font-weight: bold; margin-bottom: 0;">Results and Impact</h3>
+										<p style="margin-top: 0;">We evaluated how particle count, sensor range, measurement directions, and initial distribution impact localization performance. Increasing particles from 500 to 1000 significantly improved accuracy, but further increases added computational cost with minimal gain. Extending the sensor limit and number of measurement directions enhanced convergence by providing more information but introduced slight delays due to ambiguity from distant reflections. Localizing from the top-right quadrant led to faster convergence and lower error, while starting in symmetric hallways caused slowdowns due to perceptual aliasing. Measurement noise increased variability, whereas noise-free runs yielded smoother, more accurate estimates.
+
+											<br/>
+										<img src="images/gemres.png" alt="" style="width: auto; height: 700px; margin-top: 0; margin-bottom: 10px;" />
+									</div>
+									
+					</div>
+				</section>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
